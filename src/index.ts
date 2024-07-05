@@ -32,7 +32,7 @@ function main () {
   if (source) {
     const f = fs.existsSync(resolvePath(source));
     if (!f) {
-      throw new Error('source file not found');
+      throw new Error(`File not found: ${source}`);
     }
   }
 

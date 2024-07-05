@@ -26,7 +26,10 @@ jobs:
 
             - name: zip
               run: cd src && zip -r ~/docker-compose.zip .
-
+              
+            - name: ls
+              run: cd ~ && ls -al && pwd
+              
             - name: upload
               uses: hexf00/upload-to-oss@v1
               with:
