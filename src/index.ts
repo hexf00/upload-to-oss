@@ -1,7 +1,17 @@
 import { getInput } from '@actions/core';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import OSS from 'ali-oss';
+
+function resolvePath (filePath: string) {
+  // if the path is '~', replace it with the home directory
+  if (filePath.startsWith('~/')) {
+    const homeDirectory = os.homedir();
+    filePath = path.join(homeDirectory, filePath.slice(2));
+  }
+  return path.resolve(filePath);
+}
 
 function getInputWarp (key: string) {
   const val = getInput(key);
@@ -20,7 +30,7 @@ function main () {
   const accessKeySecret = getInputWarp('accessKeySecret');
 
   if (source) {
-    const f = fs.existsSync(path.resolve(source));
+    const f = fs.existsSync(resolvePath(source));
     if (!f) {
       throw new Error('source file not found');
     }
@@ -44,7 +54,7 @@ function main () {
     }
   }
 
-  uploadToAliOss(path.resolve(source), dest);
+  uploadToAliOss(resolvePath(source), dest);
 }
 
 try {
