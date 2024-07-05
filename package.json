@@ -1,0 +1,16 @@
+{
+	"scripts": {
+		"build": "pnpm build:bun",
+		"build:mako": "mako build",
+		"build:bun": "~/.bun/bin/bun build --minify --target=node src/index.ts > dist/index.mjs"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.9",
+		"@umijs/mako": "^0.7.4"
+	},
+	"dependencies": {
+		"@actions/core": "^1.10.1",
+		"ali-oss": "^6.20.0",
+		"proxy-agent": "^6.4.0"
+	}
+}

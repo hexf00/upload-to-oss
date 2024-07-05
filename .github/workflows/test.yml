@@ -1,0 +1,26 @@
+name: test
+
+on:
+  workflow_dispatch: 
+    
+permissions:
+    contents: read
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: test upload-to-oss
+              uses: ./
+              with:
+                source: 'src/index.ts'
+                dest: 'test/index.ts'
+                bucket: ${{secrets.bucket}}
+                region: ${{secrets.region}}
+                accessKeyId: ${{secrets.accessKeyId}}
+                accessKeySecret: ${{secrets.accessKeySecret}}
+

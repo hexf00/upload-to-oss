@@ -1,0 +1,26 @@
+name: upload-to-oss
+description: 'upload to oss'
+author: 'hexf00 <hexf00@gmail.com>'
+inputs:
+  source:
+    description: 'source'
+    required: true
+  dest:
+    description: 'dest'
+    required: true
+  bucket:
+    description: 'bucket'
+    required: true
+  region:
+    description: 'region'
+    required: true
+  accessKeyId:
+    description: 'accessKeyId'
+    required: true
+  accessKeySecret:
+    description: 'accessKeySecret'
+    required: true
+    
+runs:
+  using: 'node20'
+  main: 'dist/index.mjs'

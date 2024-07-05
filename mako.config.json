@@ -1,0 +1,11 @@
+{
+  "entry": {
+    "index": "./src/index.ts"
+  },
+  "platform": "node",
+  "cjs": false,
+  "minify":true,
+  "mode":"production",
+  "dynamicImportToRequire":true,
+  "devtool": false
+}
