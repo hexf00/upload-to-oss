@@ -25,13 +25,13 @@ jobs:
                 accessKeySecret: ${{secrets.accessKeySecret}}
 
             - name: zip
-              run: zip -r test.zip src
+              run: cd src && zip -r ~/docker-compose.zip .
 
             - name: upload
               uses: hexf00/upload-to-oss@v1
               with:
-                source: 'src/index.ts'
-                dest: 'test/index.ts'
+                source: '~/docker-compose.zip'
+                dest: 'test/test.zip'
                 bucket: ${{secrets.bucket}}
                 region: ${{secrets.region}}
                 accessKeyId: ${{secrets.accessKeyId}}
