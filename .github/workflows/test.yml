@@ -28,7 +28,7 @@ jobs:
               run: zip -r test.zip src
 
             - name: upload
-              uses: ./
+              uses: hexf00/upload-to-oss@v1
               with:
                 source: 'src/index.ts'
                 dest: 'test/index.ts'
