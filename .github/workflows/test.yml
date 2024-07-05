@@ -24,3 +24,15 @@ jobs:
                 accessKeyId: ${{secrets.accessKeyId}}
                 accessKeySecret: ${{secrets.accessKeySecret}}
 
+            - name: zip
+              run: zip -r test.zip src
+
+            - name: upload
+              uses: ./
+              with:
+                source: 'src/index.ts'
+                dest: 'test/index.ts'
+                bucket: ${{secrets.bucket}}
+                region: ${{secrets.region}}
+                accessKeyId: ${{secrets.accessKeyId}}
+                accessKeySecret: ${{secrets.accessKeySecret}}
