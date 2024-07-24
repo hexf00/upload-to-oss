@@ -5,6 +5,7 @@
 		"build:bun": "~/.bun/bin/bun build --minify --target=node src/index.ts > dist/index.mjs"
 	},
 	"devDependencies": {
+		"@types/ali-oss": "^6.16.11",
 		"@types/node": "^20.14.9",
 		"@umijs/mako": "^0.7.4"
 	},

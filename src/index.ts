@@ -28,6 +28,7 @@ function main () {
   const region = getInputWarp('region');
   const accessKeyId = getInputWarp('accessKeyId');
   const accessKeySecret = getInputWarp('accessKeySecret');
+  const timeout = getInputWarp('timeout');
 
   if (source) {
     const f = fs.existsSync(resolvePath(source));
@@ -42,6 +43,7 @@ function main () {
     accessKeyId,
     accessKeySecret,
     bucket,
+    timeout,
   });
 
   /** upload file to Ali OSS  */

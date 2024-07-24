@@ -20,6 +20,10 @@ inputs:
   accessKeySecret:
     description: 'accessKeySecret'
     required: true
+  timeout:
+    description: 'timeout'
+    required: false
+    default: '180s'
     
 runs:
   using: 'node20'

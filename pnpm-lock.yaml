@@ -18,6 +18,9 @@ importers:
         specifier: ^6.4.0
         version: 6.4.0
     devDependencies:
+      '@types/ali-oss':
+        specifier: ^6.16.11
+        version: 6.16.11
       '@types/node':
         specifier: ^20.14.9
         version: 20.14.9
@@ -42,6 +45,9 @@ packages:
 
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
+
+  '@types/ali-oss@6.16.11':
+    resolution: {integrity: sha512-/AyemPZy93ZXGzEokMsoPFgjH37snpzH4X/fwans/n63HLaCleriCG3PyrkHCPkgHEc9vj9Uo6paqsBN3vJ3OA==}
 
   '@types/node@20.14.9':
     resolution: {integrity: sha512-06OCtnTXtWOZBJlRApleWndH4JsRVs1pDCc8dLSQp+7PpUpX3ePdHyeNSFTeSe7FtKyQkrlPvHwJOW3SLd8Oyg==}
@@ -898,6 +904,8 @@ snapshots:
       tslib: 2.6.3
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
+
+  '@types/ali-oss@6.16.11': {}
 
   '@types/node@20.14.9':
     dependencies:
