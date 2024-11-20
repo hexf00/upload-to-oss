@@ -1,4 +1,4 @@
-import { getInput } from '@actions/core';
+import { getInput, error } from '@actions/core';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -54,6 +54,7 @@ function main () {
       console.log('Success:', uploadResult);
     } catch (error) {
       console.error('Error', error);
+      error(error);
       process.exit(1);
     }
   }
