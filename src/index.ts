@@ -44,6 +44,7 @@ function main () {
     accessKeySecret,
     bucket,
     timeout,
+    secure: true
   });
 
   /** upload file to Ali OSS  */
