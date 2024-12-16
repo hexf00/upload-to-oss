@@ -45,7 +45,7 @@ async function main () {
     }
     files.push([resolvePath(source), dest]);
   } else if (globPattern) {
-    const pattern = globPattern.split(',');
+    const pattern = globPattern.split('\n');
     files = (await Promise.all(pattern.map(p => glob(p)))).flat().map(p => [p, path.join(dest, path.basename(p))]);
     if (files.length === 0) {
       throw new Error(`No files found with pattern: ${globPattern}`);

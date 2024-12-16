@@ -17,9 +17,9 @@ jobs:
             - name: test upload-to-oss
               uses: ./
               with:
-                files: 
-                  - '**/*.ts'
-                  - '**/*.yaml'
+                files: |
+                  **/*.ts
+                  **/*.yaml
                 dest: 'test/test'
                 bucket: ${{secrets.bucket}}
                 region: ${{secrets.region}}

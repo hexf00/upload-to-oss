@@ -13,10 +13,7 @@
           "INPUT_BUCKET": "your_bucket",
           "INPUT_ENDPOINT": "oss-cn-hangzhou.aliyuncs.com",
           "INPUT_REGION": "oss-cn-hangzhou", 
-          "INPUT_FILES": [
-             "**/*.ts",
-             "**/*.yaml"
-          ],
+          "INPUT_FILES": "**/*.ts\n**/*.yaml",
           "INPUT_DEST": "test-folder"
         }
       }
