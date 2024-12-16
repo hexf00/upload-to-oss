@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0", 
+    "configurations": [
+      {
+        "type": "bun",
+        "request": "launch",
+        "name": "Debug Action",
+        "program": "${workspaceFolder}/src/index.ts",
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "INPUT_ACCESSKEYID": "your_key",
+          "INPUT_ACCESSKEYSECRET": "your_secret",
+          "INPUT_BUCKET": "your_bucket",
+          "INPUT_ENDPOINT": "oss-cn-hangzhou.aliyuncs.com",
+          "INPUT_REGION": "oss-cn-hangzhou", 
+          "INPUT_FILES": [
+             "**/*.ts",
+             "**/*.yaml"
+          ],
+          "INPUT_DEST": "test-folder"
+        }
+      }
+    ]
+  }

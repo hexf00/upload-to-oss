@@ -12,6 +12,7 @@
 	"dependencies": {
 		"@actions/core": "^1.10.1",
 		"ali-oss": "^6.20.0",
-		"proxy-agent": "^6.4.0"
+		"proxy-agent": "^6.4.0",
+		"tiny-glob": "^0.2.9"
 	}
 }
