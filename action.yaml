@@ -2,9 +2,12 @@ name: upload-to-oss
 description: 'upload to oss'
 author: 'hexf00 <hexf00@gmail.com>'
 inputs:
+  files:
+    description: 'files'
+    required: false
   source:
     description: 'source'
-    required: true
+    required: false
   dest:
     description: 'dest'
     required: true
